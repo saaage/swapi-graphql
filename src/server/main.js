@@ -9,6 +9,7 @@
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import swapiSchema from '../schema';
+import cors from 'cors';
 
 const app = express();
 
@@ -17,9 +18,10 @@ app.all('/graphql', (req, res) => res.redirect('/'));
 
 app.use(
   '/',
+  cors(),
   graphqlHTTP(() => ({
     schema: swapiSchema,
-    graphiql: true,
+    graphiql: false
   })),
 );
 
