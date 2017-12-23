@@ -33,7 +33,7 @@
   },
   "scripts": {
     "test": "npm run lint && npm run pretty-check && npm run check && npm run testonly",
-    "start": "npm run download && babel-node src/server/main.js",
+    "start": "yarn run download && babel-node src/server/main.js",
     "watch": "babel scripts/watch.js | node",
     "testonly": "mocha $npm_package_options_mocha",
     "lint": "eslint src",
