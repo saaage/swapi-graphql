@@ -16,6 +16,7 @@ const app = express();
 // Requests to /graphql redirect to /
 app.all('/graphql', (req, res) => res.redirect('/'));
 
+// The following route has been modified to enable CORS
 app.use(
   '/',
   cors(),
