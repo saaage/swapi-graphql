@@ -1,3 +1,7 @@
+## Note
+
+This is a modified version of the GraphQL Server running at [SWAPI GraphQL](http://graphql.org/swapi-graphql/) and a clone of this [REPO](https://github.com/graphql/swapi-graphql). It hs been modified to return JSON instead of a graphiql interface, and to allow Cross-Origin Resource Sharing. 
+
 SWAPI GraphQL Wrapper
 =====================
 
@@ -20,12 +24,9 @@ Install dependencies with
 npm install
 ```
 
-## SWAPI Wrapper
-
-The SWAPI wrapper is in `./swapi`. It can be tested with:
-
+or
 ```sh
-npm test
+yarn
 ```
 
 ## Local Server
@@ -33,7 +34,11 @@ npm test
 A local express server is in `./server`. It can be run with:
 
 ```sh
-npm start
+npm start  //start script currently utilizes yarn, change if using npm
+```
+or
+```sh
+yarn start //babel-node must be installed globally for start script to run
 ```
 
 A GraphiQL instance will be opened at http://localhost:8080/ (or similar; the actual port number will be printed to the console) to explore the API.
